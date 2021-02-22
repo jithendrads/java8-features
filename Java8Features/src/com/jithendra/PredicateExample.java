@@ -1,7 +1,9 @@
 package com.jithendra;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 class EmployeeExample
 {
@@ -38,12 +40,17 @@ public class PredicateExample {
 		l.add(new EmployeeExample("Dhoni",2345));
 		l.add(new EmployeeExample("anil kumble",8765));
 		l.add(new EmployeeExample("Irfan patan",3456));
-		Predicate<EmployeeExample> p1=e->e.salary>3000;
-		for(EmployeeExample e:l)
-		{
-			if(p1.test(e))
-				System.out.println(e.name+" "+e.salary);
-		}
+		Predicate<EmployeeExample> p1=e->e.salary>3000);
+		Predicate<EmployeeExample> p2=e->e.name.startsWith("D");
+		Predicate<EmployeeExample> p3=p1.and(p2);
+//		for(EmployeeExample e:l)
+//		{
+//			if(p1.test(e))
+//				System.out.println(e.name+" "+e.salary);
+//		}
+		
+	l.stream().filter(p3).forEach(e->System.out.println(e.name+" "+e.salary));
+		
 		
 
 	}
