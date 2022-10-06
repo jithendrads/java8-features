@@ -1,0 +1,24 @@
+package java8programs;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Java8EmpDemo {
+	
+	public static void main(String[] args)
+	{
+		List<Employee> empList=new ArrayList<Employee>();
+		empList.add(new Employee(1, 500));
+		empList.add(new Employee(2, 100));
+		empList.add(new Employee(3, 600));
+		empList.add(new Employee(4, 400));
+		empList.add(new Employee(5, 200));
+		empList.add(new Employee(6, 900));
+		empList.add(new Employee(7, 300));
+		
+		//Given an Employee List, sort employees based on salaries in desc order
+		empList.stream().sorted().forEach(e-> System.out.println(e.getId()+" "+e.getSalary()));
+		
+	}
+
+}

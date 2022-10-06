@@ -1,0 +1,5 @@
+package com.example.jithendragroupservice.repository;
+
+public interface UserRepository {
+
+}

@@ -1,0 +1,26 @@
+package com.example.springbootsecurity.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.springbootsecurity.config.CustomUserDetailsService;
+import com.example.springbootsecurity.config.JwtUtil;
+
+public class AuthenticationController {
+	
+	@Autowired
+	private AuthenticationManager authenticateManager;
+	
+	@Autowired
+	private CustomUserDetailsService customDetailsService;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
+	
+	@PostMapping(value="/authenticate",method=RequestMethod.POST)
+	public ResponseEntity<?> createAuthenticationToken()
+
+}

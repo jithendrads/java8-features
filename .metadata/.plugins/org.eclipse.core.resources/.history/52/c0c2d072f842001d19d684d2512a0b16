@@ -1,0 +1,36 @@
+package java8programs;
+
+public class Address {
+	
+	private String streetName;
+	private int pinCode;
+	
+	
+	
+	public Address() {
+		
+	}
+
+
+	public Address(String streetName, int pinCode) {
+		this.streetName = streetName;
+		this.pinCode = pinCode;
+	}
+	
+	
+	public String getStreetName() {
+		return streetName;
+	}
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
+	}
+	public int getPinCode() {
+		return pinCode;
+	}
+	public void setPinCode(int pinCode) {
+		this.pinCode = pinCode;
+	}
+	
+	
+
+}

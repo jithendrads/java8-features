@@ -1,0 +1,5 @@
+package com.example.jithendragroupservice.service;
+
+public class GroupUserDetails {
+
+}
